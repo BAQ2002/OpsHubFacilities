@@ -1,0 +1,63 @@
+:root {
+    --bg-start: var(--color-white); /* --bg-start: valor "var(--color-white)". define uma cor. */
+    --bg-end: var(--color-text-inverse); /* --bg-end: valor "var(--color-text-inverse)". define uma cor. */
+    --panel: var(--color-white); /* --panel: valor "var(--color-white)". define uma cor. */
+    --panel-border: var(--color-border); /* --panel-border: valor "var(--color-border)". define uma cor. */
+    --text-primary: var(--color-text-primary); /* --text-primary: valor "var(--color-text-primary)". define uma cor. */
+    --text-muted: var(--color-text-secondary); /* --text-muted: valor "var(--color-text-secondary)". define uma cor. */
+    --accent: var(--color-primary); /* --accent: valor "var(--color-primary)". define uma cor. */
+    --accent-soft: color-mix(in srgb, var(--color-primary) 12%, var(--color-white));
+    --swines-soft: color-mix(in srgb, var(--color-swines) 12%, var(--color-white)); /* --accent-soft: valor "color-mix(in srgb, var(--color-primary) 12%, var(--color-white))". define uma cor. */
+}
+
+    body {
+        min-height: 100vh; /* min-height: valor "100vh". unidades: 100vh: 1% da altura da viewport. */
+        margin: 0; /* margin: valor "0". valor neutro/ausente para essa propriedade. */
+        background: linear-gradient(180deg, var(--bg-start) 0%, var(--bg-end) 100%); /* background: valor "linear-gradient(180deg, var(--bg-start) 0%, var(--bg-end) 100%)". define um gradiente como fundo. unidades: 180deg: graus de rotação/ângulo. */
+        color: var(--color-text-primary); /* color: valor "var(--color-text-primary)". */
+        padding-bottom: 0; /* padding-bottom: valor "2rem". unidades: 2rem: unidade relativa ao font-size do elemento raiz (html). */
+        font-family: "Inter", "Segoe UI", sans-serif; /* font-family: valor ""Inter", "Segoe UI", sans-serif". */
+    }
+
+    .home-shell {
+        min-height: 100vh; /* min-height: valor "100vh". unidades: 100vh: 1% da altura da viewport. */
+        display: flex; /* display: valor "flex". define o modo de layout/exibição. */
+        flex-direction: column; /* flex-direction: valor "column". */
+    }
+
+
+.hero {
+    width: min(68.75rem, 92vw); /* width: valor "min(1100px, 92vw)". valor responsivo calculado por função matemática. unidades: 1100px: pixels da CSS (unidade fixa na tela); 92vw: 1% da largura da viewport. */
+    margin: 3.5rem auto; /* margin: valor "3.5rem auto". unidades: 3.5rem: unidade relativa ao font-size do elemento raiz (html). */
+    background: var(--color-white); /* background: valor "var(--color-white)". define uma cor. */
+    border: 1px solid var(--color-border); /* border: valor "1px solid var(--color-border)". unidades: 1px: pixels da CSS (unidade fixa na tela). */
+    border-radius: var(--radius-3xl); /* border-radius: valor "24px". unidades: 24px: pixels da CSS (unidade fixa na tela). */
+    box-shadow: 0 18px 42px rgba(15, 23, 42, 0.08); /* box-shadow: valor "0 18px 42px rgba(15, 23, 42, 0.08)". unidades: 18px: pixels da CSS (unidade fixa na tela); 42px: pixels da CSS (unidade fixa na tela). */
+    padding: 2.5rem; /* padding: valor "2.5rem". unidades: 2.5rem: unidade relativa ao font-size do elemento raiz (html). */
+}
+
+    .hero h1 {
+        font-size: var(--font-size-hero-title); /* font-size: valor "clamp(2rem, 4vw, 3rem)". valor fluido limitado por mínimo e máximo com clamp(). unidades: 2rem: unidade relativa ao font-size do elemento raiz (html); 4vw: 1% da largura da viewport; 3rem: unidade relativa ao font-size do elemento raiz (html). */
+        margin-bottom: 0.6rem; /* margin-bottom: valor "0.6rem". unidades: 0.6rem: unidade relativa ao font-size do elemento raiz (html). */
+        font-weight: 700; /* font-weight: valor "700". */
+    }
+
+    .hero p {
+        color: var(--color-text-secondary); /* color: valor "var(--color-text-secondary)". */
+        max-width: 60ch; /* max-width: valor "60ch". unidades: 60ch: largura do caractere "0" da fonte atual. */
+        margin-bottom: 2rem; /* margin-bottom: valor "2rem". unidades: 2rem: unidade relativa ao font-size do elemento raiz (html). */
+    }
+
+
+
+
+    @media (max-width: 960px) {
+        .cards-grid {
+            grid-template-columns: 1fr; /* grid-template-columns: valor "1fr". unidades: 1fr: fração do espaço disponível no grid. */
+        }
+
+        .hero {
+            margin-top: 2.2rem; /* margin-top: valor "2.2rem". unidades: 2.2rem: unidade relativa ao font-size do elemento raiz (html). */
+            padding: var(--space-150); /* padding: valor "var(--space-150)". unidades: var(--space-150): unidade relativa ao font-size do elemento raiz (html). */
+        }
+    }

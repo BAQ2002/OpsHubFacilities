@@ -1,0 +1,55 @@
+.floating-field {
+    position: relative;
+}
+
+.floating-field-input {
+    width: 100%;
+    height: var(--size-field-medium);
+    border: 1px solid var(--color-border);
+    background: var(--color-white);
+    color: var(--color-black);
+    border-radius: var(--radius-medium);
+    padding: var(--space-100) var(--space-075) var(--space-050);
+    font-size: var(--font-size-body-medium);
+    box-shadow: none;
+}
+
+.floating-field-input:focus {
+    outline: none;
+    border: 2px solid var(--color-primary);
+    box-shadow: none;
+}
+
+.floating-field-input::placeholder {
+    color: transparent;
+}
+
+.floating-field:not(.filled):not(:focus-within) input[type="date"].floating-field-input {
+    color: transparent;
+}
+
+.floating-field:not(.filled):not(:focus-within) input[type="date"].floating-field-input::-webkit-datetime-edit {
+    color: transparent;
+}
+
+.floating-field-label {
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: var(--color-white);
+    padding: 0 var(--space-025);
+    color: var(--color-black);
+    line-height: 1.1;
+    transition: all 0.2s ease;
+    pointer-events: none;
+    font-size: var(--font-size-body-medium);
+}
+
+.floating-field:focus-within .floating-field-label,
+.floating-field.filled .floating-field-label {
+    top: 0;
+    transform: translateY(-50%);
+    font-size: var(--font-size-floating-label-active);
+    color: var(--color-black);
+}

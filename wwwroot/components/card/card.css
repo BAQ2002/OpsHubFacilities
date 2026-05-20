@@ -1,0 +1,74 @@
+
+
+.cards-grid {
+    display: grid; /* display: valor "grid". define o modo de layout/exibição. */
+    grid-template-columns: repeat(3, minmax(0, 1fr)); /* grid-template-columns: valor "repeat(3, minmax(0, 1fr))". unidades: 1fr: fração do espaço disponível no grid. */
+    gap: var(--space-100); /* gap: valor "var(--space-100)". unidades: var(--space-100): unidade relativa ao font-size do elemento raiz (html). */
+}
+
+.feature-card {
+    display: block; /* display: valor "block". define o modo de layout/exibição. */
+    text-decoration: none; /* text-decoration: valor "none". valor neutro/ausente para essa propriedade. */
+    color: inherit; /* color: valor "inherit". usa o valor global "inherit" da cascata. */
+    background: var(--panel); /* background: valor "var(--panel)". */
+    border: 1px solid var(--panel-border);
+    --feature-accent: var(--color-primary);
+    --feature-icon-background: var(--accent-soft); /* border: valor "1px solid var(--panel-border)". unidades: 1px: pixels da CSS (unidade fixa na tela). */
+    border-radius: var(--radius-xl); /* border-radius: valor "16px". unidades: 16px: pixels da CSS (unidade fixa na tela). */
+    padding: 1.2rem; /* padding: valor "1.2rem". unidades: 1.2rem: unidade relativa ao font-size do elemento raiz (html). */
+    transition: transform .2s ease, border-color .2s ease, box-shadow .2s ease; /* transition: valor "transform .2s ease, border-color .2s ease, box-shadow .2s ease". unidades: .2s: segundos (tempo de animação/transição). */
+    min-height: 11.25rem; /* min-height: valor "180px". unidades: 180px: pixels da CSS (unidade fixa na tela). */
+}
+
+.feature-card:hover {
+    transform: translateY(-3px); /* transform: valor "translateY(-3px)". unidades: -3px: pixels da CSS (unidade fixa na tela). */
+    border: 1px solid var(--feature-accent); /* border: valor "1px solid rgba(34, 197, 94, 0.75)". unidades: 1px: pixels da CSS (unidade fixa na tela). */
+    box-shadow: 0 14px 35px rgba(15, 23, 42, 0.12); /* box-shadow: valor "0 14px 35px rgba(15, 23, 42, 0.12)". unidades: 14px: pixels da CSS (unidade fixa na tela); 35px: pixels da CSS (unidade fixa na tela). */
+}
+
+.feature-icon {
+    width: 3.2rem; /* width: valor "2.2rem". unidades: 2.2rem: unidade relativa ao font-size do elemento raiz (html). */
+    height: 3.2rem; /* height: valor "2.2rem". unidades: 2.2rem: unidade relativa ao font-size do elemento raiz (html). */
+    border-radius: var(--radius-medium); /* border-radius: valor "10px". unidades: 10px: pixels da CSS (unidade fixa na tela). */
+    display: inline-flex; /* display: valor "inline-flex". define o modo de layout/exibição. */
+    align-items: center; /* align-items: valor "center". */
+    justify-content: center; /* justify-content: valor "center". */
+    background: var(--feature-icon-background); /* background: valor "var(--accent-soft)". */
+    color: var(--color-primary); /* color: valor "var(--color-primary)". define uma cor. */
+    margin-bottom: 0.9rem; /* margin-bottom: valor "0.9rem". unidades: 0.9rem: unidade relativa ao font-size do elemento raiz (html). */
+}
+
+
+.feature-icon-svg {
+    width: var(--svg-size-large);
+    height: var(--svg-size-large);
+    display: block;
+    object-fit: contain;
+}
+
+.feature-card h2 {
+    font-size: var(--font-size-title-medium); /* font-size: valor "1.15rem". unidades: 1.15rem: unidade relativa ao font-size do elemento raiz (html). */
+    font-weight: 600; /* font-weight: valor "600". */
+    margin-bottom: .45rem; /* margin-bottom: valor ".45rem". unidades: .45rem: unidade relativa ao font-size do elemento raiz (html). */
+}
+
+
+.feature-card:hover h2 {
+    color: var(--feature-accent);
+}
+
+.feature-card p {
+    margin: 0; /* margin: valor "0". valor neutro/ausente para essa propriedade. */
+    color: var(--color-text-secondary); /* color: valor "var(--color-text-secondary)". */
+    font-size: var(--font-size-caption-large); /* font-size: valor ".94rem". unidades: .94rem: unidade relativa ao font-size do elemento raiz (html). */
+}
+
+.tag {
+    display: inline-flex; /* display: valor "inline-flex". define o modo de layout/exibição. */
+    gap: .4rem; /* gap: valor ".4rem". unidades: .4rem: unidade relativa ao font-size do elemento raiz (html). */
+    align-items: center; /* align-items: valor "center". */
+    margin-top: .85rem; /* margin-top: valor ".85rem". unidades: .85rem: unidade relativa ao font-size do elemento raiz (html). */
+    color: var(--color-primary); /* color: valor "var(--color-primary)". define uma cor. */
+    font-size: var(--font-size-caption-small); /* font-size: valor ".86rem". unidades: .86rem: unidade relativa ao font-size do elemento raiz (html). */
+    font-weight: 500; /* font-weight: valor "500". */
+}

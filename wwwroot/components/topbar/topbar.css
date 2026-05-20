@@ -1,0 +1,59 @@
+
+.page-shell {
+    width: 100%; /* width: valor "100%". */
+    max-width: var(--container-narrow); /* max-width: valor "1000px". unidades: 1000px: pixels da CSS (unidade fixa na tela). */
+    margin: 0 auto; /* margin: valor "0 auto". */
+    display: flex; /* display: valor "flex". define o modo de layout/exibição. */
+    flex-direction: column; /* flex-direction: valor "column". */
+    gap: var(--space-100); /* gap: valor "16px". unidades: 16px: pixels da CSS (unidade fixa na tela). */
+}
+
+.topbar {
+    position: sticky; /* position: valor "sticky". */
+    top: 0; /* top: valor "0". valor neutro/ausente para essa propriedade. */
+    z-index: 50; /* z-index: valor "50". */
+    display: flex; /* display: valor "flex". define o modo de layout/exibição. */
+    align-items: center; /* align-items: valor "center". */
+    justify-content: space-between; /* justify-content: valor "space-between". */
+    width: 100%; /* width: valor "100vw". unidades: 100vw: 1% da largura da viewport. */
+    height: var(--am-topbar-height);
+    box-sizing: border-box; /* box-sizing: valor "border-box". */
+    padding: 0.9rem 1.4rem; /* padding: valor "0.9rem 1.4rem". unidades: 0.9rem: unidade relativa ao font-size do elemento raiz (html); 1.4rem: unidade relativa ao font-size do elemento raiz (html). */
+    backdrop-filter: blur(16px); /* backdrop-filter: valor "blur(16px)". unidades: 16px: pixels da CSS (unidade fixa na tela). */
+    background: var(--color-background-primary); /* background: valor "var(--color-topbar-overlay)". define uma cor. */
+    border-bottom: 1px solid var(--color-topbar-border); /* border-bottom: valor "1px solid var(--color-topbar-border)". unidades: 1px: pixels da CSS (unidade fixa na tela). */
+}
+
+.topbar-brand {
+    text-decoration: none; /* text-decoration: valor "none". valor neutro/ausente para essa propriedade. */
+}
+
+.topbar-brand {
+    display: inline-flex;
+    align-items: center;
+}
+
+.topbar-brand-logo {
+    height: var(--topbar-brand-height);
+    width: var(--topbar-brand-width);
+    display: block;
+}
+
+.profile-trigger {
+    border: 1px solid var(--color-border); /* border: valor "1px solid var(--color-border)". unidades: 1px: pixels da CSS (unidade fixa na tela). */
+    background: var(--color-border); /* background: valor "var(--color-border)". define uma cor. */
+    color: var(--color-black); /* color: valor "var(--color-black)". define uma cor. */
+}
+
+.profile-trigger:hover,
+.profile-trigger:focus {
+    background: var(--color-border); /* background: valor "var(--color-border)". define uma cor. */
+    border: 1px solid var(--color-primary); /* border: valor "1px solid var(--color-primary)". unidades: 1px: pixels da CSS (unidade fixa na tela). */
+    color: var(--color-black); /* color: valor "var(--color-black)". define uma cor. */
+}
+
+@media (max-width: 760px) {
+    .topbar {
+        padding: var(--space-075) var(--space-100); /* padding: valor "var(--space-075) var(--space-100)". unidades: var(--space-075): unidade relativa ao font-size do elemento raiz (html); var(--space-100): unidade relativa ao font-size do elemento raiz (html). */
+    }
+}

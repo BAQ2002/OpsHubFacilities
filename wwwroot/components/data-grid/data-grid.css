@@ -1,0 +1,257 @@
+﻿/* DataGrid */
+
+.datagrid-wrapper {
+    margin-top: 0.375rem;
+    border-radius: var(--radius-large);
+    overflow: hidden;
+    border: 1px solid var(--color-border);
+    background: var(--color-white);
+    padding-top: 1rem;
+    padding-left: 1rem;
+}
+
+.datagrid-header {
+    background-color: #E5ECE7;
+    color: #E5ECE7;
+    background-color: #E5ECE7;
+}
+.datagrid-toolbar label {
+    color: var(--color-black);
+    font-size: var(--font-size-caption-small);
+}
+
+.datagrid-page-size {
+    border: 0px solid;
+    border-radius: 8px;
+    padding: 0.25rem 0.5rem;
+    background: var(--color-border);
+    color: var(--color-black);
+    font-size: var(--font-size-caption-small);
+}
+
+.datagrid {
+    --datagrid-scrollbar-width: 0px;
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+    table-layout: fixed;
+    font-size: var(--font-size-body-small);
+}
+
+.datagrid-pagination-actions {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    
+    justify-content: center;
+    justify-content: flex-end;
+    width: 100%;
+}
+
+.datagrid thead,
+.datagrid tbody tr {
+    display: table;
+    width: 100%;
+    table-layout: fixed;
+}
+
+.datagrid tbody {
+    display: block;
+    overflow-y: auto;
+    scrollbar-gutter: stable;
+    height: var(--datagrid-body-height, 320px);
+}
+
+
+.datagrid thead {
+    padding-right: var(--datagrid-scrollbar-width);
+    box-sizing: border-box;
+}
+
+    .datagrid thead {
+        background: var(--color-background-primary);
+    }
+
+.datagrid th,
+.datagrid td {
+    padding: var(--space-075) var(--size-icon-medium);
+}
+
+    .datagrid th {
+        text-align: left;
+        font-weight: 500;
+        color: var(--color-black);
+        border-bottom: 1px solid var(--color-border);
+        font-size: var(--font-size-caption-small);
+        background: var(--color-white);
+    }
+
+.datagrid tbody tr {
+    position: relative;
+    transition: box-shadow 0.15s ease;
+}
+
+.datagrid tbody tr td {
+    transition: background-color 0.15s ease, border-color 0.15s ease;
+    border-top: 1px solid transparent;
+}
+
+.datagrid tbody tr td {
+    background-color: var(--color-white);
+}
+
+.datagrid tbody tr:hover {
+    z-index: 2;
+    box-shadow: 0 12px 14px -12px rgba(0, 0, 0, 0.5);
+}
+
+.datagrid tbody tr:hover td {
+    background-color: color-mix(in srgb, var(--color-primary) 8%, var(--color-white));
+    border-top-color: var(--color-primary);
+    border-bottom-color: var(--color-primary);
+}
+
+.datagrid td {
+    border-bottom: 1px solid var(--color-border);
+}
+
+.datagrid tbody td:first-child {
+    border-left: 1px solid transparent;
+}
+
+.datagrid tbody td:last-child {
+    border-right: 1px solid transparent;
+}
+
+.datagrid tbody tr:hover td:first-child {
+    border-left-color: var(--color-primary);
+}
+
+.datagrid tbody tr:hover td:last-child {
+    border-right-color: var(--color-primary);
+}
+
+.datagrid tbody td,
+.datagrid tbody td a {
+    color: var(--color-black);
+}
+
+.datagrid td:nth-child(4),
+.datagrid td:nth-child(5) {
+    text-align: left;
+    font-variant-numeric: tabular-nums;
+}
+
+.datagrid-pagination-actions {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    justify-content: center;
+    width: 100%;
+}
+
+.datagrid-page-button {
+    border: 0;
+    background: transparent;
+    width: 1.75rem;
+    height: 1.75rem;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--color-black);
+    font-size: var(--font-size-body-small);
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.datagrid-page-button:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+
+.datagrid-page-markers {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.datagrid-page-marker {
+    border: 0;
+    border-radius: 6px;
+    min-width: 1.75rem;
+    height: 1.75rem;
+    padding: 0 0.4rem;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background: transparent;
+    color: var(--color-black);
+    font-size: var(--font-size-caption-small);
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.datagrid-page-marker:hover {
+    background-color: var(--color-primary-soft);
+}
+
+.datagrid-page-marker.is-active {
+    background: var(--color-primary);
+    color: var(--color-white);
+}
+
+.datagrid-page-marker-ellipsis {
+    color: var(--color-black);
+}
+/**/
+.datagrid-sort-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.5rem;
+    gap: 0.25rem;
+    position: relative;
+    border-radius: 0.5rem;
+    border: 1px solid var(--color-border);
+}
+    .datagrid-sort-header:hover {
+        border: 1px solid var(--color-primary);
+        background: var(--color-background-secondary);
+    }
+/**/
+.datagrid-sort-priority-btn,
+.datagrid-sort-direction-btn {
+    min-width: 2rem;
+    height: 1.6rem;
+    padding: 0 0.35rem;
+    border-radius: 6px;
+}
+
+.datagrid-sort-priority-btn {
+    font-size: var(--font-size-caption-small);
+}
+
+.datagrid-sort-menu {
+    position: absolute;
+    z-index: 20;
+    display: none;
+    margin-top: 0;
+    min-width: 6rem;
+}
+
+.datagrid-sort-menu.open {
+    display: grid;
+}
+
+th[data-sort-key] {
+    position: relative;
+}
+
+th[data-sort-key] [data-menu="priority"] {
+    left: 0;
+}
+
+th[data-sort-key] [data-menu="direction"] {
+    right: auto;
+}

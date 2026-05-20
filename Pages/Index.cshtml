@@ -1,0 +1,53 @@
+﻿@{
+    ViewData["Title"] = "Início";
+}
+
+
+@section Styles {
+    <link rel="stylesheet" href="~/css/pages/shared/index.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/components/card/card.css" asp-append-version="true" />
+
+}
+
+
+
+<div class="home-shell">
+
+
+    <main class="hero">
+        <h1>Bem-vindo ao AgroManager</h1>
+        <p>
+            Centralize a operação pecuária em um painel moderno para monitorar animais e lotes.
+            Escolha um módulo para começar.
+        </p>
+
+        <section class="cards-grid" aria-label="Módulos de gerenciamento">
+            <a class="feature-card" style="--feature-accent: var(--color-bovines); --feature-icon-background: var(--color-bovines-soft);" asp-controller="bovines" asp-action="Index">
+                <span class="feature-icon" aria-hidden="true">
+                    <img class="feature-icon-svg" src="~/assets/icons/bovines.svg" alt="" />
+                </span>
+                <h2>Gerenciar Bovinos</h2>
+                <p>Cadastro completo, consulta de dados e acompanhamento do rebanho bovino.</p>
+                <span class="tag" style="color: var(--color-bovines);">Abrir módulo <i class="bi bi-arrow-right-short"></i></span>
+            </a>
+
+            <a class="feature-card" style="--feature-accent: var(--color-swines); --feature-icon-background: var(--color-swines-soft);" asp-controller="Swines" asp-action="Index">
+                <span class="feature-icon" aria-hidden="true">
+                    <img class="feature-icon-svg " style="margin-top: 0.25rem;" src="~/assets/icons/swines.svg" alt="" />
+                </span>
+                <h2>Gerenciar Suínos</h2>
+                <p>Organize os suínos por status, origem e evolução produtiva.</p>
+                <span class="tag" style="color: var(--color-swines);">Abrir módulo <i class="bi bi-arrow-right-short"></i></span>
+            </a>
+
+            <a class="feature-card" style="--feature-accent: var(--color-batches); --feature-icon-background: var(--color-batches-soft);" asp-controller="Batch" asp-action="Index">
+                <span class="feature-icon" aria-hidden="true">
+                    <img class="feature-icon-svg" style="height: 2.4rem; width: 2.4rem;" src="~/assets/icons/batches.svg" alt="" />
+                </span>
+                <h2>Gerenciar Lotes</h2>
+                <p>Visualize e administre lotes para otimizar alocação e manejo no dia a dia.</p>
+                <span class="tag" style="color: var(--color-batches);">Abrir módulo <i class="bi bi-arrow-right-short"></i></span>
+            </a>
+        </section>
+    </main>
+</div>

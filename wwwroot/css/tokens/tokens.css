@@ -1,0 +1,106 @@
+:root {
+    /* Base neutrals */
+    --color-white: #ffffff;
+    --color-black: #000000;
+    --color-border: #E5E5E5;
+    /* Backgrounds */
+
+    --color-background-primary: #FFFFFF;
+    --color-background-secondary: #F2F2F2;
+    /*--color-background-primary-dark: #FFFFFF;
+    --color-background-secondary-dark: #FFFFFF; 
+
+    /* Text */
+    --color-text-primary: #0f172a;
+    --color-text-secondary: #606060;
+    --color-text-inverse: #f8fafc;
+    /* Text : Hover */
+
+    --color-text-primary-hover-background: #E5E5E5;
+    --color-text-secondary-hover-background: #E5E5E5;
+    /* Module Color */
+    --color-bovines: #296436;
+    --color-bovines-soft: #E5ECE7;
+    --color-milk-hard: FFE9AA;
+    --color-milk-soft: FFF2D1;
+    /*--------------------------*/
+    --color-swines: #FF7F7F;
+    --color-swines-soft: color-mix(in srgb, var(--color-swines) 12%, var(--color-white));
+    /*--------------------------*/
+    --color-batches: #3B82F6;
+    --color-batches-soft: color-mix(in srgb, var(--color-batches) 12%, var(--color-white));
+    /* Brand */
+    --color-primary: #296436;
+    --color-primary-soft: #D9E3DB;
+    /* Feedback */
+    --color-danger-soft: #fca5a5;
+    --color-link: #0077cc;
+    --color-focus-ring: #258cfb;
+    --color-legacy-primary-bg: #1b6ec2;
+    --color-legacy-primary-border: #1861ac;
+    --color-surface-alt: #f5f7f6;
+    --color-topbar-overlay: rgba(2, 6, 23, 0.7);
+    --color-topbar-border: rgba(148, 163, 184, 0.22);
+    --color-topbar-surface: rgba(15, 23, 42, 0.78);
+    --color-topbar-surface-hover: rgba(30, 41, 59, 0.9);
+    /* Spacing scale */
+    --space-000: 0rem; /* 00px */
+    --space-025: 0.25rem; /* 04px */
+    --space-050: 0.5rem; /* 08px */
+    --space-075: 0.75rem; /* 12px */
+    --space-100: 1rem; /* 16px */
+    --space-125: 1.25rem; /* 20px */
+    --space-150: 1.5rem; /* 24px */
+    --space-175: 1.75rem; /* 28px */
+    --space-200: 2rem; /* 32px */
+    --space-300: 3rem; /* 48px */
+    --page-horizontal-margin: 1.5rem;
+    /* Radius */
+    --radius-small: 0.5rem; /* 8px */
+    --radius-medium: 0.625rem; /* 10px */
+    --radius-large: 0.875rem; /* 14px */
+    --radius-xl: 1rem; /* 16px */
+    --radius-2xl: 1.25rem; /* 20px */
+    --radius-3xl: 1.5rem; /* 24px */
+    --radius-pill: 62.4375rem; /* 999px */
+    /* Sizing */
+    --size-control-small: 1.125rem; /* 18px */
+    --size-control-medium: 2.125rem; /* 34px */
+    --size-field-medium: 2.625rem; /* 42px */
+    --size-icon-small: 0.5rem; /* 8px */
+    --size-icon-medium: 0.875rem; /* 14px */
+    --size-icon-large: 1.1875rem; /* 19px */
+    --size-calendar-day: 2.75rem; /* 44px */
+    --side-bar-width: 15rem;
+    --am-topbar-height: 4rem;
+    --topbar-brand-height: 3rem;
+    --topbar-brand-width: 13.7rem;
+    --filters-container-width: 22.5rem; /* 360px */
+    /* Containers */
+    --container-narrow: 62.5rem; /* 1000px */
+    --container-wide: 110rem; /* 1760px */
+    --container-ultra: 118.75rem; /* 1900px */
+    --calendar-width: 33.125rem; /* 530px */
+    /* Typography - icon sizes */
+    --svg-size-small: 1rem;
+    --svg-size-medium: 1.5rem;
+    --svg-size-large: 2.8rem;
+    /* Typography - font sizes */
+    --font-size-root-mobile: 14px;
+    --font-size-root-desktop: 16px;
+    --font-size-hero-title: clamp(2rem, 4vw, 3rem);
+    --font-size-title-large: 1.5rem;
+    --font-size-title-medium: 1.15rem;
+    --font-size-body-large: 1rem;
+    --font-size-body-medium: 0.95rem;
+    --font-size-body-small: 0.9rem;
+    --font-size-body-xs: 0.8rem;
+    --font-size-caption-large: 0.94rem;
+    --font-size-caption-small: 0.85rem;
+    --font-size-button-small: 1rem;
+    --font-size-option-small: 0.9rem;
+    --font-size-floating-label-active: 12px;
+    --font-size-calendar-header: 40px;
+    --font-size-calendar-month-year: 37%;
+    --font-size-calendar-day: 1rem;
+}

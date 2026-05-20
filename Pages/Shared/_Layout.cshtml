@@ -1,0 +1,119 @@
+﻿<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - AgroManager</title>
+
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/tokens.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/token-classes.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/styles.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/components/topbar/topbar.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/components/sidebar/sidebar.css" asp-append-version="true" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css" />
+    <link rel="stylesheet" href="~/components/date-picker/date-picker.css" asp-append-version="true" />
+
+    @await RenderSectionAsync("Styles", required: false)
+
+    <!-- Bootstrap Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+</head>
+
+@{
+        var pageWidth = ViewData["PageMaxWidth"] as string;
+        var currentController = (ViewContext.RouteData.Values["controller"]?.ToString() ?? string.Empty).ToLowerInvariant();
+        var pageContainerClass = pageWidth switch
+        {
+                "wide" => "page-container page-container-wide",
+                "full" => "page-container page-container-full",
+                _ => "page-container"
+        };
+}
+
+<body data-current-controller="@ViewContext.RouteData.Values["controller"]">
+
+    <!-- Top Bar -->
+    <header class="topbar">
+        <a class="topbar-brand" href="@Url.Action("Index", "Home")" aria-label="AgroManager">
+            <img src="~/assets/icons/agro-manager-logo.svg" alt="AgroManager" class="topbar-brand-logo" />
+        </a>
+
+        <div class="dropdown">
+            <button class="btn profile-trigger rounded-pill d-flex align-items-center gap-2 px-3" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Acessar conta">
+                <i class="bi bi-person-circle fs-5"></i>
+                <span>Conta</span>
+            </button>
+            <ul class="dropdown-menu dropdown-menu-end">
+                <li><a class="dropdown-item" href="@Url.Action("Login", "Account")">Acessar conta</a></li>
+                <li><a class="dropdown-item" href="@Url.Action("Login", "Account")">Perfil</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <!-- Side Bar -->
+    <div class="app-shell">
+        <aside class="sidebar" aria-label="Menu lateral">
+            <nav>
+                <section class="sidebar-section">
+                    <span class="sidebar-section-label">Principal</span>
+                    <div class="sidebar-links">
+                        <a class="sidebar-nav-button @(currentController == "home" ? "is-active" : string.Empty)" href="@Url.Action("Index", "Home")">
+                            <img class="sidebar-icon-svg" src="~/assets/icons/home_icon.svg" alt="" />
+                            <span class="sidebar-nav-label">Início</span>
+                        </a>
+                    </div>
+                </section>
+
+                <section class="sidebar-section">
+                    <span class="sidebar-section-label">Gestão de rebanho</span>
+                    <div class="sidebar-links">
+                        <a class="sidebar-nav-button @(currentController == "bovines" ? "is-active" : string.Empty)" href="@Url.Action("IndexBovine", "Bovines")">
+                            <img class="sidebar-icon-svg" src="~/assets/icons/bovines.svg" alt="" />
+                            <span class="sidebar-nav-label">Bovinos</span>
+                        </a>
+                        <a class="sidebar-nav-button @(currentController == "swines" ? "is-active" : string.Empty)" href="@Url.Action("Index", "Swines")">
+                            <img class="sidebar-icon-svg" src="~/assets/icons/swines.svg" alt="" />
+                            <span class="sidebar-nav-label">Suínos</span>
+                        </a>
+                    </div>
+                </section>
+
+                <section class="sidebar-section">
+                    <span class="sidebar-section-label">Acesso</span>
+                    <div class="sidebar-links">
+                        <a class="sidebar-nav-button @(currentController == "account" ? "is-active" : string.Empty)" href="@Url.Action("Login", "Account")">
+                            <span class="sidebar-nav-label">Conta</span>
+                        </a>
+                    </div>
+                </section>
+            </nav>
+        </aside>
+
+        <!-- CONTEÚDO PRINCIPAL -->
+        <div class="sidebar-main">
+            <div class="@pageContainerClass mt-4">
+                <main role="main">
+                    @RenderBody()
+                </main>
+            </div>
+
+            <!-- FOOTER -->
+            <footer class="border-top footer text-muted mt-5">
+                <div class="container text-center py-3">
+                    &copy; 2026 - AgroManager
+                </div>
+            </footer>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr/dist/l10n/pt.js"></script>
+    <script src="~/components/date-picker/date-picker.js" asp-append-version="true"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+
+</body>
+</html>

@@ -1,0 +1,99 @@
+.app-shell {
+    width: 100%;
+}
+
+.sidebar {
+    position: fixed;
+    left: 0;
+    top: var(--am-topbar-height);
+    width: var(--side-bar-width);
+    height: calc(100vh - var(--am-topbar-height));
+    overflow-y: auto;
+    padding: var(--space-100) var(--space-100);
+    border-right: 1px solid var(--color-border);
+    background: var(--color-background-primary);
+    z-index: 20;
+}
+
+
+.sidebar-section {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-050);
+}
+
+    .sidebar-section + .sidebar-section {
+        margin-top: var(--space-100);
+    }
+
+.sidebar-section-label {
+    display: block;
+    margin-bottom: var(--space-025);
+    font-size: var(--font-size-caption-small);
+    font-weight: 600;
+    color: var(--color-text-secondary);
+}
+
+.sidebar-icon-svg {
+    width: var(--svg-size-medium);
+    height: var(--svg-size-medium);
+    display: block;
+    object-fit: contain;
+}
+
+.sidebar-links {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-050);
+}
+
+.sidebar-nav-button {
+    width: 100%;
+    display: inline-flex;
+    align-items: center;
+    gap: var(--space-050);
+    border: 1px solid transparent;
+    border-radius: var(--radius-medium);
+    background: transparent;
+    color: var(--color-text-primary);
+    text-decoration: none;
+    padding: var(--space-050) var(--space-100);
+    transition: background-color 150ms ease, border-color 150ms ease, color 150ms ease;
+}
+
+    .sidebar-nav-button:hover,
+    .sidebar-nav-button:focus-visible {
+        background: var(--color-primary-soft);
+        border-color: var(--color-border);
+        color: var(--color-primary);
+    }
+
+    .sidebar-nav-button.is-active {
+        background: var(--color-primary-soft);
+        border-color: var(--color-primary);
+        color: var(--color-primary);
+    }
+
+.sidebar-nav-label {
+    font-size: var(--font-size-body-small);
+    font-weight: 500;
+}
+
+.sidebar-main {
+    margin-left: var(--side-bar-width);
+    min-width: 0;
+}
+
+@media (max-width: 960px) {
+    .sidebar {
+        position: static;
+        width: auto;
+        height: auto;
+        border-right: 0;
+        border-bottom: 1px solid var(--color-border);
+    }
+
+    .sidebar-main {
+        margin-left: 0;
+    }
+}

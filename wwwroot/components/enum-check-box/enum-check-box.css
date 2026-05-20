@@ -1,0 +1,84 @@
+.enum-check-box {
+    position: relative;
+}
+
+.enum-check-box > button[type="button"] {
+    cursor: pointer;
+    text-align: left;
+    display: flex;
+    align-items: center;
+    transition: border-color 0.15s ease, box-shadow 0.15s ease;
+    padding-right: var(--size-control-medium);
+    appearance: none;
+    position: relative;
+}
+
+.enum-check-box::after {
+    content: "";
+    position: absolute;
+    right: 12px;
+    top: 50%;
+    width: var(--space-050);
+    height: var(--space-050);
+    border-right: 2px solid var(--color-black);
+    border-bottom: 2px solid var(--color-black);
+    transform: translateY(-70%) rotate(45deg);
+    pointer-events: none;
+    transition: transform 0.15s ease;
+}
+
+.enum-check-box.open::after {
+    transform: translateY(-30%) rotate(-135deg);
+}
+
+.enum-check-box-menu {
+    display: none;
+    position: absolute;
+    z-index: 12;
+    top: calc(100% + 6px);
+    left: 0;
+    right: 0;
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-medium);
+    background: var(--color-white);
+    box-shadow: none;
+    padding: var(--space-050);
+    max-height: 190px;
+    overflow-y: auto;
+}
+
+.enum-check-box.open > button[type="button"] {
+    border: 2px solid var(--color-primary);
+    box-shadow: none;
+}
+
+.enum-check-box.open .enum-check-box-menu {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-025);
+}
+
+.enum-check-box-menu label {
+    display: flex;
+    gap: 0.375rem;
+    align-items: center;
+    font-size: var(--font-size-option-small);
+    line-height: 1.1;
+    letter-spacing: 0.06em;
+    font-weight: 600;
+    color: var(--color-black);
+    padding: var(--space-025) 0.375rem;
+    border-radius: var(--radius-small);
+    transition: background-color 0.15s ease;
+}
+
+.enum-check-box-menu label input[type="checkbox"] {
+    margin: 0;
+    width: var(--size-icon-medium);
+    height: var(--size-icon-medium);
+    flex: 0 0 auto;
+}
+
+.enum-check-box-menu label:hover {
+    background: var(--color-border);
+}

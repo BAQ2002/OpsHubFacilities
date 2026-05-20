@@ -1,0 +1,49 @@
+﻿.datagrid-generic-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--color-black);
+    border: 1px solid var(--color-border);
+    text-decoration: none;
+    color: var(--color-black);
+    background: var(--color-background-primary);
+    border: 1px solid var(--color-border);
+    transition: border-color 0.2s ease, box-shadow 0.2s ease, background-color 0.2s ease, outline-color 0.2s ease;
+}
+
+    .datagrid-generic-button:hover {
+        color: var(--color-black);
+        background: var(--color-background-secondary);
+        border: 1px solid var(--color-primary);
+    }
+
+
+.button-with-icon,
+.datagrid-generic-button {
+    gap: var(--space-050);
+    font-size: var(--font-size-body-medium);
+    font-weight: 500;
+    text-transform: none;
+    letter-spacing: normal;
+    padding: var(--space-025) var(--space-075);
+    border-radius: var(--radius-pill);
+}
+
+.datagrid-generic-button-svg {
+    width: var(--font-size-body-medium);
+    height: var(--font-size-body-medium);
+    display: block;
+    object-fit: contain;
+}
+
+.button-with-icon svg,
+.datagrid-generic-button svg {
+    width: var(--space-125);
+    height: var(--space-125);
+    fill: none;
+    stroke: currentColor;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    display: block;
+    flex: 0 0 auto;
+}

@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v8.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v8.0": {
+      "OpsHub_Facilities/1.0.0": {
+        "runtime": {
+          "OpsHub_Facilities.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "OpsHub_Facilities/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}
