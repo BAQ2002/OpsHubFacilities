@@ -34,8 +34,6 @@ wwwroot\components\primary-button\primary-button.css
 wwwroot\components\sidebar\sidebar.css
 wwwroot\components\sidebar\sidebar.js
 wwwroot\components\topbar\topbar.css
-wwwroot\css\pages\bovines\IndexBovine.css
-wwwroot\css\pages\shared\index.css
 wwwroot\css\site.css
 wwwroot\css\styles.css
 wwwroot\css\tokens\token-classes.css

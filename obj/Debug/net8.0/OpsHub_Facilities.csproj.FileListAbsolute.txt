@@ -31,3 +31,4 @@ C:\Users\anton\Source\repos\OpsHub_Facilities\obj\Debug\net8.0\refint\OpsHub_Fac
 C:\Users\anton\Source\repos\OpsHub_Facilities\obj\Debug\net8.0\OpsHub_Facilities.pdb
 C:\Users\anton\Source\repos\OpsHub_Facilities\obj\Debug\net8.0\OpsHub_Facilities.genruntimeconfig.cache
 C:\Users\anton\Source\repos\OpsHub_Facilities\obj\Debug\net8.0\ref\OpsHub_Facilities.dll
+C:\Users\anton\Source\repos\OpsHub_Facilities\obj\Debug\net8.0\OpsHub_Facilities.sourcelink.json

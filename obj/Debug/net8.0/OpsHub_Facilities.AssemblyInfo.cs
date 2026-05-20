@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("OpsHub_Facilities")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+f2e87c9c5f4b12cf98c4e2123a6423951f3a2ec3")]
 [assembly: System.Reflection.AssemblyProductAttribute("OpsHub_Facilities")]
 [assembly: System.Reflection.AssemblyTitleAttribute("OpsHub_Facilities")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
