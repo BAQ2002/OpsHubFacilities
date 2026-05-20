@@ -22,7 +22,7 @@
         </p>
 
         <section class="cards-grid" aria-label="Módulos de gerenciamento">
-            <a class="feature-card" style="--feature-accent: var(--color-bovines); --feature-icon-background: var(--color-bovines-soft);" asp-controller="bovines" asp-action="Index">
+            <a class="feature-card" style="--feature-accent: var(--color-bovines); --feature-icon-background: var(--color-bovines-soft);" asp-page="/Bovines/IndexBovine">
                 <span class="feature-icon" aria-hidden="true">
                     <img class="feature-icon-svg" src="~/assets/icons/bovines.svg" alt="" />
                 </span>
@@ -31,7 +31,7 @@
                 <span class="tag" style="color: var(--color-bovines);">Abrir módulo <i class="bi bi-arrow-right-short"></i></span>
             </a>
 
-            <a class="feature-card" style="--feature-accent: var(--color-swines); --feature-icon-background: var(--color-swines-soft);" asp-controller="Swines" asp-action="Index">
+            <a class="feature-card" style="--feature-accent: var(--color-swines); --feature-icon-background: var(--color-swines-soft);" asp-page="/Swines/Index">
                 <span class="feature-icon" aria-hidden="true">
                     <img class="feature-icon-svg " style="margin-top: 0.25rem;" src="~/assets/icons/swines.svg" alt="" />
                 </span>
@@ -40,7 +40,7 @@
                 <span class="tag" style="color: var(--color-swines);">Abrir módulo <i class="bi bi-arrow-right-short"></i></span>
             </a>
 
-            <a class="feature-card" style="--feature-accent: var(--color-batches); --feature-icon-background: var(--color-batches-soft);" asp-controller="Batch" asp-action="Index">
+            <a class="feature-card" style="--feature-accent: var(--color-batches); --feature-icon-background: var(--color-batches-soft);" asp-page="/Batch/Index">
                 <span class="feature-icon" aria-hidden="true">
                     <img class="feature-icon-svg" style="height: 2.4rem; width: 2.4rem;" src="~/assets/icons/batches.svg" alt="" />
                 </span>

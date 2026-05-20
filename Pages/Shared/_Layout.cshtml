@@ -6,8 +6,8 @@
     <title>@ViewData["Title"] - AgroManager</title>
 
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
-    <link rel="stylesheet" href="~/css/tokens.css" asp-append-version="true" />
-    <link rel="stylesheet" href="~/css/token-classes.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/tokens/tokens.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/tokens/token-classes.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/css/styles.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/components/topbar/topbar.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/components/sidebar/sidebar.css" asp-append-version="true" />
@@ -35,7 +35,7 @@
 
     <!-- Top Bar -->
     <header class="topbar">
-        <a class="topbar-brand" href="@Url.Action("Index", "Home")" aria-label="AgroManager">
+        <a class="topbar-brand" asp-page="/Index" aria-label="AgroManager">
             <img src="~/assets/icons/agro-manager-logo.svg" alt="AgroManager" class="topbar-brand-logo" />
         </a>
 
@@ -45,8 +45,8 @@
                 <span>Conta</span>
             </button>
             <ul class="dropdown-menu dropdown-menu-end">
-                <li><a class="dropdown-item" href="@Url.Action("Login", "Account")">Acessar conta</a></li>
-                <li><a class="dropdown-item" href="@Url.Action("Login", "Account")">Perfil</a></li>
+                <li><a class="dropdown-item" asp-page="/Account/Login">Acessar conta</a></li>
+                <li><a class="dropdown-item" asp-page="/Account/Login">Perfil</a></li>
             </ul>
         </div>
     </header>
@@ -58,7 +58,7 @@
                 <section class="sidebar-section">
                     <span class="sidebar-section-label">Principal</span>
                     <div class="sidebar-links">
-                        <a class="sidebar-nav-button @(currentController == "home" ? "is-active" : string.Empty)" href="@Url.Action("Index", "Home")">
+                        <a class="sidebar-nav-button @(currentController == "home" ? "is-active" : string.Empty)" asp-page="/Index">
                             <img class="sidebar-icon-svg" src="~/assets/icons/home_icon.svg" alt="" />
                             <span class="sidebar-nav-label">Início</span>
                         </a>
@@ -68,11 +68,11 @@
                 <section class="sidebar-section">
                     <span class="sidebar-section-label">Gestão de rebanho</span>
                     <div class="sidebar-links">
-                        <a class="sidebar-nav-button @(currentController == "bovines" ? "is-active" : string.Empty)" href="@Url.Action("IndexBovine", "Bovines")">
+                        <a class="sidebar-nav-button @(currentController == "bovines" ? "is-active" : string.Empty)" asp-page="/Bovines/IndexBovine">
                             <img class="sidebar-icon-svg" src="~/assets/icons/bovines.svg" alt="" />
                             <span class="sidebar-nav-label">Bovinos</span>
                         </a>
-                        <a class="sidebar-nav-button @(currentController == "swines" ? "is-active" : string.Empty)" href="@Url.Action("Index", "Swines")">
+                        <a class="sidebar-nav-button @(currentController == "swines" ? "is-active" : string.Empty)" asp-page="/Swines/Index">
                             <img class="sidebar-icon-svg" src="~/assets/icons/swines.svg" alt="" />
                             <span class="sidebar-nav-label">Suínos</span>
                         </a>
@@ -82,7 +82,7 @@
                 <section class="sidebar-section">
                     <span class="sidebar-section-label">Acesso</span>
                     <div class="sidebar-links">
-                        <a class="sidebar-nav-button @(currentController == "account" ? "is-active" : string.Empty)" href="@Url.Action("Login", "Account")">
+                        <a class="sidebar-nav-button @(currentController == "account" ? "is-active" : string.Empty)" asp-page="/Account/Login">
                             <span class="sidebar-nav-label">Conta</span>
                         </a>
                     </div>
