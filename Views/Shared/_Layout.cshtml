@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - AgroManager</title>
+
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/tokens/tokens.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/tokens/token-classes.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/styles.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/components/topbar/topbar.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/components/sidebar/sidebar.css" asp-append-version="true" />
+</head>
+<body>
+<header class="topbar">
+    <a class="topbar-brand" href="@Url.Action("Index", "Home")" aria-label="AgroManager">
+        <img src="~/assets/icons/agro-manager-logo.svg" alt="AgroManager" class="topbar-brand-logo" />
+    </a>
+</header>
+<div class="app-shell">
+    <aside class="sidebar" aria-label="Menu lateral">
+        <nav class="sidebar-links">
+            <a class="sidebar-nav-button" href="@Url.Action("Index", "Home")">Início</a>
+            <a class="sidebar-nav-button" href="@Url.Action("IndexBovine", "Bovines")">Bovinos</a>
+            <a class="sidebar-nav-button" href="@Url.Action("Index", "Swines")">Suínos</a>
+            <a class="sidebar-nav-button" href="@Url.Action("Index", "Batch")">Lotes</a>
+            <a class="sidebar-nav-button" href="@Url.Action("Login", "Account")">Conta</a>
+        </nav>
+    </aside>
+    <div class="sidebar-main">
+        <div class="page-container mt-4">
+            <main role="main">
+                @RenderBody()
+            </main>
+        </div>
+    </div>
+</div>
+<script src="~/lib/jquery/dist/jquery.min.js"></script>
+<script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
