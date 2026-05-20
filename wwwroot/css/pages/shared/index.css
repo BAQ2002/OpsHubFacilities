@@ -1,0 +1,24 @@
+.home-shell {
+    display: flex;
+    justify-content: center;
+}
+
+.hero {
+    width: min(100%, 1100px);
+    background: var(--panel, #fff);
+    border: 1px solid var(--panel-border, #e5e7eb);
+    border-radius: 1rem;
+    padding: 2rem;
+    box-shadow: var(--shadow-sm, 0 4px 14px rgba(0,0,0,.05));
+}
+
+.hero h1 {
+    font-size: var(--font-size-hero-title, clamp(2rem, 4vw, 3rem));
+    margin-bottom: .75rem;
+}
+
+.hero > p {
+    color: var(--text-muted, #6b7280);
+    margin-bottom: 1.5rem;
+    max-width: 70ch;
+}
