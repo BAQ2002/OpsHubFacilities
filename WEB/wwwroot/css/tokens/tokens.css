@@ -21,8 +21,8 @@
     /* Module Color */
     --color-bovines: #296436;
     --color-bovines-soft: #E5ECE7;
-    --color-milk-hard: FFE9AA;
-    --color-milk-soft: FFF2D1;
+    --color-milk-hard: #FFE9AA;
+    --color-milk-soft: #FFF2D1;
     /*--------------------------*/
     --color-swines: #FF7F7F;
     --color-swines-soft: color-mix(in srgb, var(--color-swines) 12%, var(--color-white));
