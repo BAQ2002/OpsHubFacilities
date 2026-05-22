@@ -88,3 +88,49 @@
     font-size: var(--font-size-caption-small); /* font-size: valor ".86rem". unidades: .86rem: unidade relativa ao font-size do elemento raiz (html). */
     font-weight: 500; /* font-weight: valor "500". */
 }
+
+
+.feature-card-footer {
+    margin-top: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.75rem;
+}
+
+.feature-card-footer .tag {
+    margin-top: 0;
+}
+
+.progress-ring {
+    --progress: 0;
+    --progress-color: var(--feature-accent);
+    --progress-track: color-mix(in srgb, var(--progress-color) 18%, var(--color-white));
+    --ring-size: 4.4rem;
+    --ring-thickness: 0.5rem;
+
+    width: var(--ring-size);
+    height: var(--ring-size);
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+    flex-shrink: 0;
+    background: conic-gradient(var(--progress-color) calc(var(--progress) * 1%), var(--progress-track) 0);
+    position: relative;
+}
+
+.progress-ring::before {
+    content: "";
+    position: absolute;
+    inset: var(--ring-thickness);
+    border-radius: 50%;
+    background: var(--color-white);
+}
+
+.progress-ring span {
+    position: relative;
+    z-index: 1;
+    font-size: var(--font-size-title-medium);
+    font-weight: 700;
+    color: var(--progress-color);
+}
