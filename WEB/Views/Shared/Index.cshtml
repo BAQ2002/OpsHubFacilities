@@ -22,7 +22,7 @@
         </p>
 
         <section class="cards-grid" aria-label="Módulos de gerenciamento">
-            <a class="feature-card" style="--feature-accent: var(--color-bovines); --feature-icon-background: var(--color-bovines-soft);" asp-controller="bovines" asp-action="Index">
+            <a class="feature-card" style="--feature-accent: var(--color-bovines); --feature-icon-background: var(--color-bovines-soft); --progress-color: var(--color-bovines); --progress-value: 78;" asp-controller="bovines" asp-action="Index">
                 <div class="feature-card-header">
                     <span class="feature-icon" aria-hidden="true">
                         <img class="feature-icon-svg" src="~/assets/icons/Monitor_icon.svg" alt="" />
@@ -32,10 +32,15 @@
                         <p>Serviço de modernização do setor administrativo.</p>
                     </div>
                 </div>
-                <span class="tag" style="color: var(--color-bovines);">Abrir módulo <i class="bi bi-arrow-right-short"></i></span>
+                <div class="feature-card-footer">
+                    <div class="progress-ring" style="--progress-color: var(--color-bovines); --progress-value: 78;" aria-label="78% concluído">
+                        <span class="progress-ring-value">78%</span>
+                    </div>
+                    <span class="tag" style="color: var(--color-bovines);">Abrir módulo <i class="bi bi-arrow-right-short"></i></span>
+                </div>
             </a>
 
-            <a class="feature-card" style="--feature-accent: var(--color-swines); --feature-icon-background: var(--color-swines-soft);" asp-controller="Swines" asp-action="Index">
+            <a class="feature-card" style="--feature-accent: var(--color-swines); --feature-icon-background: var(--color-swines-soft); --progress-color: var(--color-swines); --progress-value: 52;" asp-controller="Swines" asp-action="Index">
                 <div class="feature-card-header">
                     <span class="feature-icon" aria-hidden="true">
                         <img class="feature-icon-svg" src="~/assets/icons/toilet_icon.svg" alt="" />
@@ -45,10 +50,15 @@
                         <p>Revitalização do banheiro da Manutenção - Oficina.</p>
                     </div>
                 </div>
-                <span class="tag" style="color: var(--color-swines);">Abrir módulo <i class="bi bi-arrow-right-short"></i></span>
+                <div class="feature-card-footer">
+                    <div class="progress-ring" style="--progress-color: var(--color-swines); --progress-value: 52;" aria-label="52% concluído">
+                        <span class="progress-ring-value">52%</span>
+                    </div>
+                    <span class="tag" style="color: var(--color-swines);">Abrir módulo <i class="bi bi-arrow-right-short"></i></span>
+                </div>
             </a>
 
-            <a class="feature-card" style="--feature-accent: var(--color-batches); --feature-icon-background: var(--color-batches-soft);" asp-controller="Batch" asp-action="Index">
+            <a class="feature-card" style="--feature-accent: var(--color-batches); --feature-icon-background: var(--color-batches-soft); --progress-color: var(--color-batches); --progress-value: 31;" asp-controller="Batch" asp-action="Index">
                 <div class="feature-card-header">
                     <span class="feature-icon" aria-hidden="true">
                         <img class="feature-icon-svg" src="~/assets/icons/refeitorio_Icon.svg" alt="" />
@@ -58,7 +68,12 @@
                         <p>Revitalização do refeitório de terceiros - CLS.</p>
                     </div>
                 </div>
-                <span class="tag" style="color: var(--color-batches);">Abrir módulo <i class="bi bi-arrow-right-short"></i></span>
+                <div class="feature-card-footer">
+                    <div class="progress-ring" style="--progress-color: var(--color-batches); --progress-value: 31;" aria-label="31% concluído">
+                        <span class="progress-ring-value">31%</span>
+                    </div>
+                    <span class="tag" style="color: var(--color-batches);">Abrir módulo <i class="bi bi-arrow-right-short"></i></span>
+                </div>
             </a>
         </section>
     </main>
