@@ -28,14 +28,16 @@
 
 .feature-card-header {
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     gap: .75rem;
     margin-bottom: 0.9rem;
 }
 
 .feature-icon {
-    width: 3.2rem; /* width: valor "2.2rem". unidades: 2.2rem: unidade relativa ao font-size do elemento raiz (html). */
-    height: 3.2rem; /* height: valor "2.2rem". unidades: 2.2rem: unidade relativa ao font-size do elemento raiz (html). */
+    width: 3.2rem;
+    height: 3.2rem;
+    min-width: 3.2rem;
+    min-height: 3.2rem;
     border-radius: var(--radius-medium); /* border-radius: valor "10px". unidades: 10px: pixels da CSS (unidade fixa na tela). */
     display: inline-flex; /* display: valor "inline-flex". define o modo de layout/exibição. */
     align-items: center; /* align-items: valor "center". */
@@ -52,9 +54,16 @@
     object-fit: contain;
 }
 
+
+.feature-card-text {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+}
+
 .feature-card h2 {
     margin: 0;
-    margin-bottom: 2rem;
+    margin-bottom: .35rem;
     font-size: var(--font-size-title-medium); /* font-size: valor "1.15rem". unidades: 1.15rem: unidade relativa ao font-size do elemento raiz (html). */
     font-weight: 600; /* font-weight: valor "600". */
 }
@@ -65,7 +74,7 @@
 }
 
 .feature-card p {
-    margin: 0; /* margin: valor "0". valor neutro/ausente para essa propriedade. */
+    margin: 0;
     color: var(--color-text-secondary); /* color: valor "var(--color-text-secondary)". */
     font-size: var(--font-size-caption-large); /* font-size: valor ".94rem". unidades: .94rem: unidade relativa ao font-size do elemento raiz (html). */
 }
