@@ -18,6 +18,8 @@
     padding: 1.2rem; /* padding: valor "1.2rem". unidades: 1.2rem: unidade relativa ao font-size do elemento raiz (html). */
     transition: transform .2s ease, border-color .2s ease, box-shadow .2s ease; /* transition: valor "transform .2s ease, border-color .2s ease, box-shadow .2s ease". unidades: .2s: segundos (tempo de animação/transição). */
     min-height: 11.25rem; /* min-height: valor "180px". unidades: 180px: pixels da CSS (unidade fixa na tela). */
+    display: flex;
+    flex-direction: column;
 }
 
 .feature-card:hover {
@@ -87,4 +89,43 @@
     color: var(--color-primary); /* color: valor "var(--color-primary)". define uma cor. */
     font-size: var(--font-size-caption-small); /* font-size: valor ".86rem". unidades: .86rem: unidade relativa ao font-size do elemento raiz (html). */
     font-weight: 500; /* font-weight: valor "500". */
+}
+
+.feature-card-footer {
+    margin-top: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: .75rem;
+}
+
+.progress-ring {
+    --progress-value: 0;
+    --progress-color: var(--feature-accent);
+    --progress-size: 4.6rem;
+    --progress-thickness: .52rem;
+    width: var(--progress-size);
+    aspect-ratio: 1;
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+    background: conic-gradient(var(--progress-color) calc(var(--progress-value) * 1%), color-mix(in srgb, var(--progress-color) 18%, var(--color-white)) 0);
+    position: relative;
+}
+
+.progress-ring::before {
+    content: "";
+    position: absolute;
+    inset: var(--progress-thickness);
+    border-radius: 50%;
+    background: var(--panel);
+}
+
+.progress-ring-value {
+    position: relative;
+    z-index: 1;
+    color: var(--progress-color);
+    font-size: var(--font-size-title-medium);
+    font-weight: 700;
+    line-height: 1;
 }
