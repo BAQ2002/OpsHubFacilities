@@ -54,7 +54,7 @@
 
 .feature-card h2 {
     margin: 0;
-
+    margin-bottom: 2rem;
     font-size: var(--font-size-title-medium); /* font-size: valor "1.15rem". unidades: 1.15rem: unidade relativa ao font-size do elemento raiz (html). */
     font-weight: 600; /* font-weight: valor "600". */
 }
