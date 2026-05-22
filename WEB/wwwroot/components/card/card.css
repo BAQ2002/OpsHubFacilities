@@ -26,6 +26,13 @@
     box-shadow: 0 14px 35px rgba(15, 23, 42, 0.12); /* box-shadow: valor "0 14px 35px rgba(15, 23, 42, 0.12)". unidades: 14px: pixels da CSS (unidade fixa na tela); 35px: pixels da CSS (unidade fixa na tela). */
 }
 
+.feature-card-header {
+    display: flex;
+    align-items: center;
+    gap: .75rem;
+    margin-bottom: 0.9rem;
+}
+
 .feature-icon {
     width: 3.2rem; /* width: valor "2.2rem". unidades: 2.2rem: unidade relativa ao font-size do elemento raiz (html). */
     height: 3.2rem; /* height: valor "2.2rem". unidades: 2.2rem: unidade relativa ao font-size do elemento raiz (html). */
@@ -35,7 +42,6 @@
     justify-content: center; /* justify-content: valor "center". */
     background: var(--feature-icon-background); /* background: valor "var(--accent-soft)". */
     color: var(--color-primary); /* color: valor "var(--color-primary)". define uma cor. */
-    margin-bottom: 0.9rem; /* margin-bottom: valor "0.9rem". unidades: 0.9rem: unidade relativa ao font-size do elemento raiz (html). */
 }
 
 
@@ -47,9 +53,10 @@
 }
 
 .feature-card h2 {
+    margin: 0;
+
     font-size: var(--font-size-title-medium); /* font-size: valor "1.15rem". unidades: 1.15rem: unidade relativa ao font-size do elemento raiz (html). */
     font-weight: 600; /* font-weight: valor "600". */
-    margin-bottom: .45rem; /* margin-bottom: valor ".45rem". unidades: .45rem: unidade relativa ao font-size do elemento raiz (html). */
 }
 
 

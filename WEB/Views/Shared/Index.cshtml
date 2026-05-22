@@ -23,28 +23,34 @@
 
         <section class="cards-grid" aria-label="Módulos de gerenciamento">
             <a class="feature-card" style="--feature-accent: var(--color-bovines); --feature-icon-background: var(--color-bovines-soft);" asp-controller="bovines" asp-action="Index">
-                <span class="feature-icon" aria-hidden="true">
-                    <img class="feature-icon-svg" src="~/assets/icons/bovines.svg" alt="" />
-                </span>
-                <h2>Gerenciar Bovinos</h2>
+                <div class="feature-card-header">
+                    <span class="feature-icon" aria-hidden="true">
+                        <img class="feature-icon-svg" src="~/assets/icons/bovines.svg" alt="" />
+                    </span>
+                    <h2>Gerenciar Bovinos</h2>
+                </div>
                 <p>Cadastro completo, consulta de dados e acompanhamento do rebanho bovino.</p>
                 <span class="tag" style="color: var(--color-bovines);">Abrir módulo <i class="bi bi-arrow-right-short"></i></span>
             </a>
 
             <a class="feature-card" style="--feature-accent: var(--color-swines); --feature-icon-background: var(--color-swines-soft);" asp-controller="Swines" asp-action="Index">
-                <span class="feature-icon" aria-hidden="true">
-                    <img class="feature-icon-svg " style="margin-top: 0.25rem;" src="~/assets/icons/swines.svg" alt="" />
-                </span>
-                <h2>Gerenciar Suínos</h2>
+                <div class="feature-card-header">
+                    <span class="feature-icon" aria-hidden="true">
+                        <img class="feature-icon-svg " style="margin-top: 0.25rem;" src="~/assets/icons/swines.svg" alt="" />
+                    </span>
+                    <h2>Gerenciar Suínos</h2>
+                </div>
                 <p>Organize os suínos por status, origem e evolução produtiva.</p>
                 <span class="tag" style="color: var(--color-swines);">Abrir módulo <i class="bi bi-arrow-right-short"></i></span>
             </a>
 
             <a class="feature-card" style="--feature-accent: var(--color-batches); --feature-icon-background: var(--color-batches-soft);" asp-controller="Batch" asp-action="Index">
-                <span class="feature-icon" aria-hidden="true">
-                    <img class="feature-icon-svg" style="height: 2.4rem; width: 2.4rem;" src="~/assets/icons/batches.svg" alt="" />
-                 </span>
-                <h2>Gerenciar Lotes</h2>
+                <div class="feature-card-header">
+                    <span class="feature-icon" aria-hidden="true">
+                        <img class="feature-icon-svg" style="height: 2.4rem; width: 2.4rem;" src="~/assets/icons/batches.svg" alt="" />
+                    </span>
+                    <h2>Gerenciar Lotes</h2>
+                </div>
                 <p>Visualize e administre lotes para otimizar alocação e manejo no dia a dia.</p>
                 <span class="tag" style="color: var(--color-batches);">Abrir módulo <i class="bi bi-arrow-right-short"></i></span>
             </a>
