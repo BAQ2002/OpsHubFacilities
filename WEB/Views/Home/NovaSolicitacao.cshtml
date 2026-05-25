@@ -1,0 +1,63 @@
+@{
+    ViewData["Title"] = "Nova solicitação";
+    ViewData["PageMaxWidth"] = "wide";
+}
+
+<section class="card border-0 shadow-sm">
+    <div class="card-body p-4 p-md-5">
+        <header class="mb-4">
+            <h1 class="h3 mb-2">Abertura de solicitação de serviço</h1>
+            <p class="text-muted mb-0">Preencha os dados abaixo para registrar a necessidade.</p>
+        </header>
+
+        <form method="post" enctype="multipart/form-data">
+            <div class="row g-3">
+                <div class="col-12 col-md-6">
+                    <label for="unidadeNegocio" class="form-label">Unidade de Negócio</label>
+                    <input id="unidadeNegocio" name="unidadeNegocio" type="text" class="form-control" placeholder="Ex.: Operações Sul" required />
+                </div>
+
+                <div class="col-12 col-md-6">
+                    <label for="fila" class="form-label">Fila</label>
+                    <input id="fila" name="fila" type="text" class="form-control" placeholder="Ex.: Infraestrutura" required />
+                </div>
+
+                <div class="col-12 col-md-6">
+                    <label for="lote" class="form-label">Lote</label>
+                    <input id="lote" name="lote" type="text" class="form-control" placeholder="Ex.: LT-2026-001" required />
+                </div>
+
+                <div class="col-12 col-md-6">
+                    <label for="tipoServico" class="form-label">Tipo de Serviço</label>
+                    <select id="tipoServico" name="tipoServico" class="form-select" required>
+                        <option value="" selected disabled>Selecione</option>
+                        <option>Manutenção corretiva</option>
+                        <option>Manutenção preventiva</option>
+                        <option>Inspeção técnica</option>
+                        <option>Suporte operacional</option>
+                    </select>
+                </div>
+
+                <div class="col-12 col-md-6">
+                    <label for="dataHoraPlanejada" class="form-label">Data e hora planejada</label>
+                    <input id="dataHoraPlanejada" name="dataHoraPlanejada" type="datetime-local" class="form-control" required />
+                </div>
+
+                <div class="col-12 col-md-6">
+                    <label for="registrosFotograficos" class="form-label">Registros fotográficos da necessidade</label>
+                    <input id="registrosFotograficos" name="registrosFotograficos" type="file" class="form-control" accept="image/*" multiple required />
+                    <small class="text-muted">Envie uma ou mais imagens (JPG, PNG ou similares).</small>
+                </div>
+
+                <div class="col-12">
+                    <label for="descricao" class="form-label">Descrição</label>
+                    <textarea id="descricao" name="descricao" class="form-control" rows="5" placeholder="Descreva a necessidade com detalhes" required></textarea>
+                </div>
+            </div>
+
+            <div class="d-flex justify-content-end mt-4">
+                <button type="submit" class="btn btn-success px-4">Enviar solicitação</button>
+            </div>
+        </form>
+    </div>
+</section>
