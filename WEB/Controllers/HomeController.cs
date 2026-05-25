@@ -8,5 +8,11 @@ namespace AgroManager.PL.Controllers
         {
             return View();
         }
+
+        [HttpGet]
+        public IActionResult NovaSolicitacao()
+        {
+            return View();
+        }
     }
 }
